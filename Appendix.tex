@@ -1,0 +1,45 @@
+\CTEXsetup[number={\arabic{chapter}}]{chapter}
+\CTEXsetup[name={,}]{chapter}
+\CTEXsetup[nameformat={\bf\heiti\xiaosan\raggedright}]{chapter}   %	Chapter章节标号格式
+\CTEXsetup[titleformat={\bf\heiti\xiaosan\raggedright}]{chapter}      %	Chapter章节标题格式
+\CTEXsetup[beforeskip={-8ex}]{chapter}                          
+\CTEXsetup[afterskip={1ex}]{chapter}
+
+
+\lstset{language=Matlab}
+
+\appendix
+\begin{appendix}
+\chapter{证明}
+\begin{spacing}{1.5}
+%-------------------------------------------------------------------------------
+%	AppendixOne正文部分
+%-------------------------------------------------------------------------------
+提供一个证明环境，给出一个证明示例。
+
+下面证明命题，如果$\bm{A}$是正交矩阵，那么其特征值为$\pm1$。
+\begin{proof}
+设$\lambda$ 为正交矩阵的特征值，$\bm{e}$是$\bm{A}$ 属于$\lambda$ 的特征向量,即有:$\bm{A}\bm{e}=\lambda\bm{e}$，且$\bm{e}\neq0$。
+
+上式两边取转置，$\bm{e}^{T}\bm{A}^{T}=\lambda\bm{e}^{T}$。
+
+\text{将}上面两式相乘， $\bm{e}^{T}\bm{A}^{T}\bm{A}\bm{e}=\lambda^2\bm{e}^{T}\bm{e}$。
+
+$\because\bm{A}$是正交矩阵
+
+$\therefore\bm{A}^{T}\bm{A}=\bm{I}$
+
+$\therefore\bm{e}^{T}\bm{e}=\lambda^2\bm{e}^{T}\bm{e}$
+
+又 $\because\bm{e}\neq0$
+
+$\therefore\bm{e}^{T}\bm{e}$ 是一个非零的数
+
+$\therefore\lambda^2=1\Rightarrow\lambda=\pm1$
+\end{proof}
+
+
+
+\end{spacing}
+
+\end{appendix}

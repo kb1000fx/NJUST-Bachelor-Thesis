@@ -1,0 +1,35 @@
+\songti\xiaosi{
+\chapter{使用简介}
+\begin{spacing}{1.5}
+	\section{文件结构}
+	整个文档的架构在主文件(Thesis.tex)中，可以参看注释，文件的编译也是通过主文件来实现的。
+	
+	封面修改只需在主文件中按注释修改参数，具体过程已经在宏包内进行了封装。声明也默认进行了封装，无需修改。正文内容可参照下一节内容添加。中英文摘要信息、结论、致谢等部分分别在对应的tex文件中修改。
+	
+
+	\section{章节操作}
+	文件结构可以参考本范文，可以直接正在本文件上根据注释进行删改,也可以根据下面的教程自己创建章节文件。
+	
+	在与主文件相同的目录下创建新建一个.tex后缀的文件(例如命名为Chapter.tex)，在主文件对应的位置插入\fbox{\textbackslash include\{Chapter\}}即可，不需要带后缀tex。以创建本章内容的代码为例，打开Chapter.tex，输入以下内容：
+	
+	\begin{lstlisting}
+	\songti\xiaosi{
+	\chapter{使用简介}
+	\begin{spacing}{1.5}
+		\section{xxxxx}
+		xxxxxxxxxxxxxxxxxxx
+		\section{章节操作}
+		文件结构可以xxxxxxxxxx
+	\end{spacing}}
+	\end{lstlisting}
+	
+	其中第一行是确定字体字号，第二行是章题目，第三行是确定行间距，第四行是节题目。新建时只需修改章节题目以及文章内容即可。
+	
+	除文中展示的两个标题格式\fbox{\textbackslash chapter}和\fbox{\textbackslash section}外，还有三级标题\fbox{\textbackslash subsection}(黑体，小四)，如需用到可自行替换。
+	
+	\section{交叉引用}
+	正文中涉及图表等编号时，为了在增删图表公式后不需要手动改图标的标号，就可以采用交叉引用。
+	
+	首先在对应图表中使用\fbox{$\setminus$label\{samplefigure\}}、\fbox{$\setminus$label\{sampeltable\}} 进行标记，每个图标和公式的标记应该是唯一的。然后在正文中使用\fbox{图$\setminus$ref\{samplefigure\}}、\fbox{表$\setminus$ref\{sampeltable\}}对图表的标号确定。具体例子会在后面涉及。
+	
+\end{spacing}}
