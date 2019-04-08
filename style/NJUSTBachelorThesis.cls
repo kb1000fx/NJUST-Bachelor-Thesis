@@ -1,3 +1,7 @@
+%%========================================================================
+%		author:Liu Changhai
+%		E-mail:kb1000fx@gmail.com
+%%=======================================================================
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{style/NJUSTBachelorThesis}
   [2015/03/15 v2.x njustThesis
