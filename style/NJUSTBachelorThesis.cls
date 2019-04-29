@@ -1,3 +1,7 @@
+%%========================================================================
+%		author:Liu Changhai
+%		E-mail:kb1000fx@gmail.com
+%%=======================================================================
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{style/NJUSTBachelorThesis}
   [2015/03/15 v2.x njustThesis
@@ -10,6 +14,7 @@
 %%
 %%%%***************************** package infomation ***********************************
 %%
+%\RequirePackage {style/bibspacing}
 \RequirePackage {ctex}
 \RequirePackage [top=20mm, bottom=30mm, left=20mm, right=20mm]{geometry}
 \RequirePackage {titlesec, fancyhdr, fancybox, setspace, titletoc}
@@ -21,7 +26,7 @@
 \RequirePackage [figuresright]{rotating}
 \RequirePackage {colortbl, makecell}
 %% math packages
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm}
+\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm,mathptmx}
 %% graphics packages
 \RequirePackage{graphicx, subfig, caption}
 %% code package
@@ -61,6 +66,20 @@
 %   XeTeX 字体使用说明
 
 
+%	默认字体
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+
+
+%-=======================================================================================================================
+\setCJKfamilyfont{SCB}[AutoFakeBold = {2.17}]{SimSun}             
+\newcommand{\songtibold}{\CJKfamily{SCB}}               % 设置宋体加粗
+\renewcommand{\songti}{\CJKfamily{SCB}}
+
+\setCJKfamilyfont{STB}[AutoFakeBold = {2.17}]{KaiTi}             
+%\newcommand{\kaishubold}{\CJKfamily{STB}}               % 设置宋体加粗
+\renewcommand{\kaishu}{\CJKfamily{STB}}
+%===============================================================================================================
 
 % 中文断行
 \XeTeXlinebreaklocale "zh"
@@ -139,8 +158,16 @@
 %		参考文献标题设置
 %------------------------------------------------------------------------------------------------
 
-\renewcommand\bibname{参\hspace{0.5em}考\hspace{0.5em}文\hspace{0.5em}献}
 
+
+\renewcommand\bibname{参\hspace{0.5em}考\hspace{0.5em}文\hspace{0.5em}献}
+%\RequirePackage[square,comma,super,sort&compress]{natbib}% superscripted numeric cite mode
+%\bibliographystyle{apalike}% APA citation style
+%\bibliographystyle{unsrtnat}% sort as referenced
+%\bibliographystyle{plainnat}% sort by author name
+%\bibliographystyle{GBT7714-2005NLang}% sort as CHN standard 3-type 
+%\bibliographystyle{GBT7714-2005NLang_UP}
+\setlength{\bibsep}{0ex}
 
 
 %------------------------------------------------------------------------------------------------
@@ -179,16 +206,6 @@
 \lstset{breaklines}    %自动将长的代码行换行排版
 \lstset{extendedchars=false}
 
-
-%-=======================================================================================================================
-\setCJKfamilyfont{SCB}[AutoFakeBold = {2.17}]{SimSun}             
-\newcommand{\songtibold}{\CJKfamily{SCB}}               % 设置宋体加粗
-\renewcommand{\songti}{\CJKfamily{SCB}}
-
-\setCJKfamilyfont{STB}[AutoFakeBold = {2.17}]{KaiTi}             
-%\newcommand{\kaishubold}{\CJKfamily{STB}}               % 设置宋体加粗
-\renewcommand{\kaishu}{\CJKfamily{STB}}
-%===============================================================================================================
 %% 封面
 %--------------------------------------------------
 %%%%%封面变量
