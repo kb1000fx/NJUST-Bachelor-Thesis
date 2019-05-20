@@ -32,9 +32,6 @@
 \RequirePackage{graphicx, subfigure, caption}
 %% code package
 \RequirePackage {listings, float}
-%%%%%pdf
-\RequirePackage {pdfpages}
-
 %% 
 %%%%% ------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------
