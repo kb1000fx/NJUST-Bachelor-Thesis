@@ -14,22 +14,27 @@
 %%
 %%%%***************************** package infomation ***********************************
 %%
+%\RequirePackage {style/bibspacing}
 \RequirePackage {ctex}
 \RequirePackage [top=20mm, bottom=30mm, left=20mm, right=20mm]{geometry}
 \RequirePackage {titlesec, fancyhdr, fancybox, setspace, titletoc}
 \RequirePackage [super,square,sort & compress]{natbib}
 \RequirePackage [titletoc]{appendix}
 \RequirePackage {url}
+\RequirePackage	{enumerate}
 %% table package
 \RequirePackage {tabu,booktabs,tabularx,multirow,array,multicol,longtable}
 \RequirePackage [figuresright]{rotating}
 \RequirePackage {colortbl, makecell}
 %% math packages
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm}
+\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm,mathptmx}
 %% graphics packages
-\RequirePackage{graphicx, subfig, caption}
+\RequirePackage{graphicx, subfigure, caption}
 %% code package
 \RequirePackage {listings, float}
+%%%%%pdf
+\RequirePackage {pdfpages}
+
 %% 
 %%%%% ------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------
@@ -65,6 +70,20 @@
 %   XeTeX 字体使用说明
 
 
+%	默认字体
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+
+
+%-=======================================================================================================================
+\setCJKfamilyfont{SCB}[AutoFakeBold = {2.17}]{SimSun}             
+\newcommand{\songtibold}{\CJKfamily{SCB}}               % 设置宋体加粗
+\renewcommand{\songti}{\CJKfamily{SCB}}
+
+\setCJKfamilyfont{STB}[AutoFakeBold = {2.17}]{KaiTi}             
+%\newcommand{\kaishubold}{\CJKfamily{STB}}               % 设置宋体加粗
+\renewcommand{\kaishu}{\CJKfamily{STB}}
+%===============================================================================================================
 
 % 中文断行
 \XeTeXlinebreaklocale "zh"
@@ -134,17 +153,26 @@
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
 \titlecontents{section}[0em]{\vspace{0.1\baselineskip}\songti\zihao{-4}}{\thecontentslabel\ }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
+
 \titlecontents{subsection}[0em]{\vspace{0.1\baselineskip}\songti\zihao{-4}}{\thecontentslabel\ }{}
 {\hspace{.5em}\titlerule*[4pt]{$\cdot$}\contentspage}
 
-
+%\setcounter{tocdepth}{2}
 
 %------------------------------------------------------------------------------------------------
 %		参考文献标题设置
 %------------------------------------------------------------------------------------------------
 
-\renewcommand\bibname{参\hspace{0.5em}考\hspace{0.5em}文\hspace{0.5em}献}
 
+
+\renewcommand\bibname{参\hspace{0.5em}考\hspace{0.5em}文\hspace{0.5em}献}
+%\RequirePackage[square,comma,super,sort&compress]{natbib}% superscripted numeric cite mode
+%\bibliographystyle{apalike}% APA citation style
+%\bibliographystyle{unsrtnat}% sort as referenced
+%\bibliographystyle{plainnat}% sort by author name
+%\bibliographystyle{GBT7714-2005NLang}% sort as CHN standard 3-type 
+%\bibliographystyle{GBT7714-2005NLang_UP}
+\setlength{\bibsep}{0ex}
 
 
 %------------------------------------------------------------------------------------------------
@@ -183,16 +211,6 @@
 \lstset{breaklines}    %自动将长的代码行换行排版
 \lstset{extendedchars=false}
 
-
-%-=======================================================================================================================
-\setCJKfamilyfont{SCB}[AutoFakeBold = {2.17}]{SimSun}             
-\newcommand{\songtibold}{\CJKfamily{SCB}}               % 设置宋体加粗
-\renewcommand{\songti}{\CJKfamily{SCB}}
-
-\setCJKfamilyfont{STB}[AutoFakeBold = {2.17}]{KaiTi}             
-%\newcommand{\kaishubold}{\CJKfamily{STB}}               % 设置宋体加粗
-\renewcommand{\kaishu}{\CJKfamily{STB}}
-%===============================================================================================================
 %% 封面
 %--------------------------------------------------
 %%%%%封面变量
@@ -208,8 +226,9 @@
  		\includegraphics[width=75mm]{figure//Njust}\\
  	\end{figure}
  	\vspace{10mm}
- 	{\zihao{0}\heiti{毕业设计说明书 }}
- 	
+ 	%{\zihao{0}\heiti{毕业设计说明书 }}
+ 	{\fontsize{45pt}{\baselineskip}\heiti{毕业设计说明书 }}
+
  	\vspace{26.5mm}
  	\setlength{\extrarowheight}{7.5mm}
  	\begin{tabular}{rp{8.5\ccwd}<{\centering}cp{8.\ccwd}<{\centering}}
@@ -300,11 +319,13 @@
 
 \newcommand{\NJUSTENAbsTitle}[2]{
 \begin{tabular}{p{3cm}p{11cm}<{\centering}}
-    		{\bf \heiti \zihao{3}T\hspace{1mm}i\hspace{1mm}t\hspace{1mm}l\hspace{1mm}e} & {\zihao{4}#1}\\
+    		%{\bf \fontspec{SimHei}{\zihao{3}T\hspace{1mm}i\hspace{1mm}t\hspace{1mm}l\hspace{1mm}e}} & {\zihao{4}#1}\\
+		{\bf \fontspec{SimHei}{\zihao{3}Title}} & {\zihao{4}#1}\\
     		\Xcline{2-2}{0.8pt}
-    	   & {\zihao{4}Based on Geomagnetic Field and Solar Vector}\\
+    	   & {\zihao{4}#2}\\
     		\Xcline{2-2}{0.8pt}
     	\end{tabular}\\[1cm]
+\textbf{\fontspec{SimHei}{\zihao{3}{Abstract}}}
 }
 
 \newenvironment{NJUSTAbstractZH}{\NJUSTAbsHead[中]\zihao{-4}\songti\begin{spacing}{1.5}\begin{center}\begin{minipage}[b]{0.95\linewidth}\quad \\ [0.5ex]}
@@ -313,11 +334,12 @@
 \newenvironment{NJUSTAbstractEN}{\NJUSTAbsHead[外]\zihao{-4}\songti\begin{spacing}{1.5}\begin{center}\begin{minipage}[b]{0.95\linewidth}\setlength{\extrarowheight}{7.5mm}}
 {\end{minipage}\end{center}\end{spacing}}
 
-\newcommand{\NJUSTKeyWordsZH}[5]{{\heiti{关键词}} \qquad #1 \qquad #2 \qquad #3 \qquad #4 \qquad #5}
-\newcommand{\NJUSTKeyWordsEN}[5]{{\bf\zihao{-4} \heiti{Keywords}}\qquad #1 \qquad #2 \qquad #3 \qquad #4 \qquad #5}
+\newcommand{\NJUSTKeyWordsZH}[5]{{\heiti{关键词}} \quad #1 \quad #2 \qquad #3 \quad #4 \quad #5}
+\newcommand{\NJUSTKeyWordsEN}[5]{{\fontspec{SimHei}{Keywords}} {\fontspec{SimSun}{\quad #1 \quad #2 \quad #3 \quad #4 \quad #5}} }
 %=====================================================================================================================================================================
 %%目录
 \newcommand{\NJUSTcontent}{
+\setcounter{tocdepth}{2}
 
 \newpage
 \openright
@@ -340,6 +362,9 @@
 	\CTEXsetup[titleformat={ \bfseries\heiti \zihao{-3}\raggedright}]{chapter}% 章标题格式
 	\CTEXsetup[beforeskip={8ex}]{chapter}
 	\CTEXsetup[afterskip={6ex}]{chapter}
+	
+	\setcounter{tocdepth}{1}
+	
 	\tableofcontents    
 }             %生成目录
 

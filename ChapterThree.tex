@@ -107,6 +107,8 @@
 	\end{tabular}
 	
 	\section{代码插入}
+	如论文中需要插入代码，请将其放在附录位置中，切勿在正文中插入。
+	
 	代码插入可以使用lstlisting宏包来实现，lsrlisting包中预置了一些常用语言的风格，可以直接在\fbox{$\setminus$begin\{lstlisting\}[language=]}中调用。我毕设中使用的是julia语言，并没有预置的环境而需要额外设置。在这里我直接使用了jlcode包中配置的环境，需要使用其他非预置语言环境的也可以寻找对应的环境包，或是自己手动进行配置(配置方法可以参照已有环境修改关键词和颜色)。
 		
 	lstlisting可以选择在latex中插入代码片段，或是直接从文件中读取，方式如下。
@@ -144,30 +146,13 @@
 	
 	效果如下：
 	\lstinputlisting{code/testfile.jl}
+	
 	\section{参考文献}
-	参考文献在ThesisReference中\fbox{$\setminus$begin\{thebibliography\}}环境中进行填写，可以使用bibitem和BibTex两种方法。正文需要引用文献，使用\fbox{$\setminus$cite\{\}}即可。
+	本模板中使用bibtex作为文献管理工具，并且根据国标GBT7714中的要求对参考文献的格式进行了预设。
 	
-	本文为了展示二者差别分别用两种方法进行了引用，实际应用中两种方式选一个即可。
+	首先进入谷歌学术等文献检索网站，找到欲引用的文献页面并点击引用导出，选择BibTex导出。将导出的bib文件中的内容复制到项目根目录下的ref.bib文件中，也可以参考bibtex的规则自行在ref.bib文件中填写相关信息。
 	
-	\subsection{bibitem}
-	引言中前两个引用与第一页参考文献即为bibitem。格式如下：
-	\begin{lstlisting}
-	\begin{thebibliography}
-	\bibitem author,article, year, vol,
-	\end{thebibliography}
-	\end{lstlisting}
-	\subsection{BibTex}
-	引言中后两个引用与第二页参考文献即为BibTex。
-	
-	进入谷歌学术、百度学术等文献检索网站，找到欲引用的文献页面并点击引用导出，选择BibTex导出。将导出内容保存成.bib文件并放到主程序相同目录中。
-	
-	在需要引用的位置使用fbox{$\setminus$cite\{\}}插入，并在需要显示参考文献的地方输入：
-	
-	\begin{lstlisting}
-	\bibliographystyle{plain}
-	
-	\bibliography{ref}
-	\end{lstlisting}
+	在需要引用的位置使用fbox{$\setminus$cite\{\}}插入引用，编译后即可自动标注参考文献。
 	
 	使用TexStudio环境编译文件时，请在配置中将默认文献工具设为BibTex。若编译后未显示标号，可以尝试 latex-bib-latex 的三次编译法。
 	

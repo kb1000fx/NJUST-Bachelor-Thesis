@@ -1,5 +1,8 @@
 \documentclass{style/NJUSTBachelorThesis}
 %================================
+%=====按国标设置参考文献格式
+\usepackage[2015]{style/gbt7714}
+%================================
 %%===插入Julia代码
 \usepackage{style/jlcode}
 %\input{style/Julia-listings}
@@ -7,25 +10,8 @@
 
 \begin{document}
 
-%封面设定
-%%个人信息
-\def\varAuthor		{刘醒}
-\def\varStudentNum	{9151XXXX0233}
-\def\varSchool		{材料科学与工程学院}
-\def\varMajor		{材料科学与工程}
-\def\varTitleUp		{南京理工大学本科生毕业设计}
-\def\varTitleDown	{说明书\LaTeX{}模板}
-%%指导者信息
-\def\varAdvisor			{梁非凡}
-\def\varAdvisorTitle	{教授}
-\def\varCoadvisor		{向山铁也}
-\def\varCoadvisorTitle	{教授}
-\def\varJudge			{郑九妹}
-\def\varJudgeTitle 		{教授}
-\def\varYear 			{2019}
-
-%生成封面
-\NJUSTCover
+%插入封面
+\includepdf{Cover.pdf}
 
 %生成声明
 \NJUSTStatement
@@ -51,7 +37,7 @@
 %感谢
 \include{Thanks}
 
-%bibitem引用页
+%参考文献
 \include{Reference}
 
 %附录
