@@ -21,7 +21,7 @@
 \RequirePackage [super,square,sort & compress]{natbib}
 \RequirePackage [titletoc]{appendix}
 \RequirePackage {url}
-\RequirePackage	{enumerate}
+\RequirePackage	{enumitem}
 %% table package
 \RequirePackage {tabu,booktabs,tabularx,multirow,array,multicol,longtable}
 \RequirePackage [figuresright]{rotating}
@@ -32,6 +32,12 @@
 \RequirePackage{graphicx, subfigure, caption}
 %% code package
 \RequirePackage {listings, float}
+%%%%%pdf
+\RequirePackage {pdfpages}
+%=================================================================================
+%		列表格式
+\setlist[enumerate,1]{label=(\arabic*), topsep=0mm,itemsep=0mm, parsep=0mm}
+%=================================================================================
 %% 
 %%%%% ------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------
@@ -231,10 +237,12 @@
  	\begin{tabular}{rp{8.5\ccwd}<{\centering}cp{8.\ccwd}<{\centering}}
 			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{作\quad 者}~:}& \zihao{3}\kaishu{\varAuthor} & \zihao{3}\songtibold\textbf{\makebox[2.5\ccwd][s]{学\hspace{0.5em} 号}~ :}&\zihao{3}\kaishu{\varStudentNum} \\
 			\Xcline{2-2}{0.8pt}\Xcline{4-4}{0.8pt}
-			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{学\quad 院}~:}&
+			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{学\quad \quad 院}~:}&
 			\multicolumn{3}{c}{\zihao{3}\kaishu{\varSchool}} \\
 			\Xcline{2-4}{0.8pt}
-			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{专\quad 业}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{\varMajor}}\\
+			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{专业(方向)}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{\varMajor}}\\
+			\Xcline{2-4}{0.8pt}
+			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{班\quad 级}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{9151161201}}\\
 			\Xcline{2-4}{0.8pt}
 			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{题\quad 目}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{\varTitleUp}}\\
 			\Xcline{2-4}{0.8pt}
@@ -242,7 +250,7 @@
 			\Xcline{2-4}{0.8pt}
 		\end{tabular}
  	
- 	\vspace{20mm}
+ 	\vspace{10mm}
  	%\setlength{\extrarowheight}{0mm}
  	
 	\begin{tabular}{rp{10\ccwd}<{\centering}p{10\ccwd}<{\centering}}
