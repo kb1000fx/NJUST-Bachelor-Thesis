@@ -1,7 +1,7 @@
 %%========================================================================
 %		author:Liu Changhai
 %		E-mail:kb1000fx@gmail.com
-%%=======================================================================
+%%========================================================================
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{style/NJUSTBachelorThesis}
   [2015/03/15 v2.x njustThesis
@@ -132,7 +132,7 @@
 \pagestyle{fancy}
 \fancyhead[C]{
 	\zihao{-2}{\songtibold 本\hspace{0.5mm}科\hspace{0.5mm}毕\hspace{0.5mm}业\hspace{0.5mm}设\hspace{0.5mm}计\hspace{0.5mm}说\hspace{0.5mm}明
-		\hspace{0.5mm}书} }}
+		\hspace{0.5mm}书} }
 \fancyhead[LE,RO]{第~\thepage ~页}
 \fancyhead[RE,LO]{}
 \cfoot{}
@@ -212,7 +212,7 @@
 %------------------------------------------------------------------------------------------------
 
 \lstset{breaklines}    %自动将长的代码行换行排版
-\lstset{extendedchars=false}
+%\lstset{extendedchars=false}
 
 %% 封面
 %--------------------------------------------------
@@ -237,10 +237,10 @@
  	\begin{tabular}{rp{8.5\ccwd}<{\centering}cp{8.\ccwd}<{\centering}}
 			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{作\quad 者}~:}& \zihao{3}\kaishu{\varAuthor} & \zihao{3}\songtibold\textbf{\makebox[2.5\ccwd][s]{学\hspace{0.5em} 号}~ :}&\zihao{3}\kaishu{\varStudentNum} \\
 			\Xcline{2-2}{0.8pt}\Xcline{4-4}{0.8pt}
-			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{学\quad \quad 院}~:}&
+			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{学\quad 院}~:}&
 			\multicolumn{3}{c}{\zihao{3}\kaishu{\varSchool}} \\
 			\Xcline{2-4}{0.8pt}
-			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{专业(方向)}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{\varMajor}}\\
+			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{专\quad 业}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{\varMajor}}\\
 			\Xcline{2-4}{0.8pt}
 			\zihao{3}\songtibold\textbf{\makebox[3\ccwd][s]{班\quad 级}~:}& \multicolumn{3}{c}{\zihao{3}\kaishu{9151161201}}\\
 			\Xcline{2-4}{0.8pt}

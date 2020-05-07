@@ -1,3 +1,9 @@
+**2020.05.07**
+**没想到自己去年拿来自用的模板今年会有这么多人使用，感谢各位的支持。**  
+**如果使用中有什么问题可以在Github上提交issue或者直接邮件联系我。**
+**目前这个项目我不会做太多的维护了，如果对于这个模板你有什么改进的地方，如果欢迎在这里Pull Requests。**
+
+-------
 ***如果你只是想简简单单毕个业，还是用教务处的Word模板吧。*** 
 
 ***Latex带来的便捷远不及教务处朝令夕改，答辩老师吹毛求疵带来的麻烦多。***
@@ -10,15 +16,16 @@
 
 ***参考文献记得一定得引用最近五年的新作，五年以上的老古董都是辣鸡。***
 
-~~本项目是南京理工大学本科生毕业设计说明书的Latex模板。~~
+本项目是南京理工大学本科生毕业设计说明书的Latex模板。
 
 感谢程杰、方青云两位学长之前的论文模板项目。
 
-~~各部分修改方法可参照已生成的说明文档，如果有任何疑问，可以通过kb1000fx@gmail.com与我联系~~
+各部分修改方法可参照已生成的说明文档，如果有任何疑问，可以通过kb1000fx@gmail.com与我联系
 
 ## 运行环境
 ### XeLatex环境
-TexLive 2018：https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso
+~~TexLive 2018：https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso~~
+TexLive 2020：https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive.iso
 ### Latex编辑器
 TexStudio：http://texstudio.sourceforge.net/
 
